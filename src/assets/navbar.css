@@ -1,0 +1,93 @@
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  /* width: 80%; */
+  height: fit-content;
+  background-color: white;
+  border-radius: 0 0 15px 15px;
+  box-shadow: 0 3px 6px hsla(0, 0%, 40%, 0.15);
+  padding: 12px 0px;
+}
+.navbar-side {
+  width: fit-content;
+  min-width: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  background-color: inherit;
+  /* padding: 4px; */
+}
+.navbar-side__logo {
+  width: 60px;
+  padding-left: 12px;
+}
+.navbar-side__title-sub {
+  color: #666;
+  line-height: 16px;
+  padding-top: 5px;
+}
+.navbar-side__item {
+  margin: 0px 4px;
+  padding: 0 10px;
+  color: #25a69b !important;
+  cursor: pointer;
+}
+.navbar-side__item::after {
+  content: url("https://www.karzar.net/assets/img/svg/arrow-down-green.svg");
+  padding-right: 5px;
+  position: relative;
+  bottom: 2px;
+}
+.navbar-side__item-menu {
+  display: none;
+  position: absolute;
+  /* top: 64px; */
+  background-color: white;
+  width: fit-content;
+  padding: 12px 0px;
+  border-radius: 12px;
+  border: 1px solid #25a69b;
+  list-style-type: none;
+}
+.navbar-side__item:hover .navbar-side__item-menu {
+  display: block;
+}
+.navbar-side__item-menu-sub {
+  padding: 8px;
+}
+.navbar-side__item-menu-sub:hover {
+  background-color: rgba(195, 195, 195, 0.434);
+  color: black !important;
+}
+.navbar-side__title-sub:last-child {
+  padding-bottom: 0;
+}
+a {
+  color: #25a69b;
+}
+a:hover {
+  color: black;
+}
+.navbar-sidebar__button {
+  padding: 12px;
+  font-size: medium;
+  border: none;
+  border-radius: 6px;
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+}
+.navbar-sidebar__user-panel {
+  background-color: white;
+  color: #25a69b;
+  margin: 0px 12px;
+}
+.navbar-sidebar__user-panel:hover {
+  color: black;
+}
+.navbar-sidebar__karzar {
+  background-color: #25a69b;
+  color: white;
+}
