@@ -73,11 +73,11 @@ a:hover {
 }
 .navbar-sidebar__button {
   padding: 12px;
-  font-size: medium;
   border: none;
   border-radius: 6px;
   box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.15);
   cursor: pointer;
+  font-size: 15px;
 }
 .navbar-sidebar__user-panel {
   background-color: white;

@@ -30,11 +30,14 @@ const Navbar = () => {
             alt="logo"
           />
           <div className="navbar-side__title">
-            <h2>کارزار</h2>
-            <h5 className="navbar-side__title-sub">بستر مستقل جمع‌آوری امضا</h5>
+            <h3>کارزار</h3>
+            <h6 className="navbar-side__title-sub">بستر مستقل جمع‌آوری امضا</h6>
           </div>
         </div>
-        <div className="navbar-side" style={{ marginLeft: "12px" }}>
+        <div
+          className="navbar-side"
+          style={{ marginLeft: "12px", fontSize: "14px" }}
+        >
           {items.map((item) => {
             return (
               <React.Fragment>
