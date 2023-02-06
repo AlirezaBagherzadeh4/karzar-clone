@@ -5,7 +5,18 @@
   text-decoration: none;
 }
 #root {
-  width: 100vw;
+  width: 98vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.root-sub {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 12px;
 }
 body {
   height: 100vh;
@@ -14,4 +25,21 @@ body {
   flex-direction: column;
   align-items: center;
   box-sizing: border-box;
+}
+.karzar--btn {
+  background-color: #fff;
+  border-radius: 10px;
+  color: #25a69b;
+  padding: 0px 16px;
+  outline: none;
+  border: 1px solid #25a69b;
+  line-height: 40px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+.karzar--btn:hover {
+  color: white;
+  background-color: #25a69b;
+  border: 1px solid white;
 }

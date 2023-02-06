@@ -35,22 +35,24 @@
   color: #25a69b !important;
   cursor: pointer;
 }
-.navbar-side__item::after {
+/* .navbar-side__item::after {
   content: url("https://www.karzar.net/assets/img/svg/arrow-down-green.svg");
   padding-right: 5px;
   position: relative;
   bottom: 2px;
-}
+} */
 .navbar-side__item-menu {
   display: none;
   position: absolute;
-  /* top: 64px; */
+  top: 10%;
+  left: 25%;
   background-color: white;
   width: fit-content;
   padding: 12px 0px;
   border-radius: 12px;
   border: 1px solid #25a69b;
   list-style-type: none;
+  z-index: 1;
 }
 .navbar-side__item:hover .navbar-side__item-menu {
   display: block;
@@ -78,6 +80,7 @@ a:hover {
   box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.15);
   cursor: pointer;
   font-size: 15px;
+  outline: none;
 }
 .navbar-sidebar__user-panel {
   background-color: white;
@@ -90,4 +93,24 @@ a:hover {
 .navbar-sidebar__karzar {
   background-color: #25a69b;
   color: white;
+}
+.login-modal__input-section {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.login-modal__input-section__input {
+  width: 80%;
+  height: 24px;
+  border: 1px solid #666;
+  border-radius: 4px;
+  padding: 0px 8px;
+  /* direction: ltr; */
+}
+.login-modal__input-section__input:focus {
+  outline: none !important;
+}
+.login-modal__input-section__input::placeholder {
+  color: rgba(192, 192, 192, 0.574);
 }

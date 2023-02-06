@@ -1,11 +1,26 @@
-import React from "react";
+import React, { useState } from "react";
 import "../assets/navbar.css";
+import { Button, Modal } from "antd";
 
 const Navbar = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const showModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const handleOk = () => {
+    setIsModalOpen(false);
+  };
+
+  const handleCancel = () => {
+    setIsModalOpen(false);
+  };
+
   const items = [
     {
       id: 1,
-      name: "کارزارها",
+      name: "کارزارها   >",
       items: [
         { name: "فهرست همه کارزارها", link: "فلان" },
         { name: "پُر امضاترین کارزارها", link: "" },
@@ -13,11 +28,6 @@ const Navbar = () => {
         { name: "کارزارهای موفق", link: "" },
         { name: "پُر امضاترین کارزارها", link: "" },
       ],
-    },
-    {
-      id: 2,
-      name: "حمایت از کارزار",
-      items: [{ name: "حمایت از کارزار", link: "" }],
     },
   ];
   return (
@@ -42,7 +52,7 @@ const Navbar = () => {
             return (
               <React.Fragment>
                 <div key={item.id} className="navbar-side__item">
-                  <item>{item.name}</item>
+                  <p>{item.name}</p>
                   <div className="navbar-side__item-menu">
                     {item.items.map((sub) => {
                       return (
@@ -61,9 +71,67 @@ const Navbar = () => {
               </React.Fragment>
             );
           })}
-          <button className="navbar-sidebar__button navbar-sidebar__user-panel">
+          <button
+            onClick={showModal}
+            className="navbar-sidebar__button navbar-sidebar__user-panel"
+          >
             پنل کاربری
           </button>
+          <Modal
+            style={{ direction: "rtl" }}
+            title="ورود / ثبت نام"
+            open={isModalOpen}
+            onOk={handleOk}
+            onCancel={handleCancel}
+            footer={[
+              <Button key="back" onClick={handleCancel}>
+                بستن
+              </Button>,
+              <Button key="submit" type="primary" onClick={handleOk}>
+                ثبت نام
+              </Button>,
+              <Button key="submit" type="primary" onClick={handleOk}>
+                ورود
+              </Button>,
+            ]}
+          >
+            <br />
+            <hr />
+            <br />
+            <div className="login-modal__input-section">
+              <h4>ایمیل</h4>
+              <input
+                className="login-modal__input-section__input"
+                placeholder="ایمیل خود را وارد کنید"
+              />
+            </div>
+            <br />
+            <div className="login-modal__input-section">
+              <h4>رمز عبور</h4>
+              <input
+                className="login-modal__input-section__input"
+                type="password"
+                placeholder="رمز عبور خود را وارد کنید"
+              />
+            </div>
+            <br />
+            <div className="login-modal__input-section">
+              <h4>شماره تماس</h4>
+              <input
+                className="login-modal__input-section__input"
+                placeholder="شماره تماس خود را وارد کنید"
+              />
+            </div>
+            <br />
+            <div className="login-modal__input-section">
+              <h4>کُد ملی</h4>
+              <input
+                className="login-modal__input-section__input"
+                placeholder="کُد ملی خود را وارد کنید"
+              />
+            </div>
+            <br />
+          </Modal>
           <button className="navbar-sidebar__button navbar-sidebar__karzar">
             ایجاد کارزار
           </button>
