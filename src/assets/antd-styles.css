@@ -1,0 +1,37 @@
+.ant-layout {
+  background-color: white !important;
+}
+.ant-layout-sider,
+.ant-menu {
+  flex: 0 0 110px !important;
+  max-width: 110px !important;
+  min-width: 110px !important;
+  width: 110px !important;
+  background-color: rgba(37, 166, 155, 1) !important;
+  border-radius: 12px;
+}
+.ant-menu-item-selected {
+  background-color: whitesmoke !important;
+  color: black !important;
+}
+.anticon-menu-fold,
+.anticon-menu-unfold {
+  padding-left: 12px !important;
+  transform: rotate(180deg) !important;
+}
+.ant-modal-footer {
+  margin: 0 !important;
+}
+.ant-steps-item-icon {
+  background-color: whitesmoke !important;
+  border-color: #25a69b !important;
+}
+.ant-steps-icon {
+  color: black !important;
+}
+.ant-steps-item-title::after {
+  background-color: rgba(5, 5, 5, 0.06) !important;
+}
+.ant-steps-item-tail::after {
+  background-color: #25a69b !important;
+}

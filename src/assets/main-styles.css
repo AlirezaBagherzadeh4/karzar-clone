@@ -4,20 +4,6 @@
   margin: 0;
   text-decoration: none;
 }
-#root {
-  width: 98vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.root-sub {
-  width: 80%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 0px 12px;
-}
 body {
   height: 100vh;
   padding: 12px;
@@ -25,6 +11,22 @@ body {
   flex-direction: column;
   align-items: center;
   box-sizing: border-box;
+}
+#root {
+  width: 98vw;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.root-sub {
+  width: 80%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  /*justify-content: center;*/
+  align-items: center;
+  padding-top: 12px;
 }
 .karzar--btn {
   background-color: #fff;
@@ -42,4 +44,19 @@ body {
   color: white;
   background-color: #25a69b;
   border: 1px solid white;
+}
+.karzar--btn:disabled,
+.karzar--btn[disabled],
+.karzar--btn__disabled {
+  cursor: not-allowed;
+  border-color: #d9d9d9;
+  color: rgba(0, 0, 0, 0.35);
+  background-color: rgba(0, 0, 0, 0.07);
+  box-shadow: none;
+}
+.karzar-creator {
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }

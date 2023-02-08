@@ -1,0 +1,6 @@
+.user-cnt {
+    display: flex;
+    width: 95vw;
+    height: 100%;
+    direction: rtl;
+}

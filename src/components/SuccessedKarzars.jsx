@@ -2,16 +2,25 @@ import React from "react";
 import "../assets/new-karzar.css";
 import { EditOutlined, UserOutlined } from "@ant-design/icons";
 import { Card } from "antd";
+import { useNavigate } from "react-router-dom";
 
 const { Meta } = Card;
 
 const SuccessedKarzars = () => {
+  const navigate = useNavigate();
+
+  function handleClick() {
+    navigate("/successedKarzars");
+  }
+
   return (
     <React.Fragment>
       <div className="new">
         <div className="new-header">
-          <h1 className="new-header__title">پر طرفدارترین کارزارها</h1>
-          <button className="karzar--btn">کارزارهای بیشتر</button>
+          <h1 className="new-header__title">کارزارهای موفق</h1>
+          <button className="karzar--btn" onClick={handleClick}>
+            کارزارهای بیشتر
+          </button>
         </div>
         <br />
         <div className="new-card__cnt">
@@ -43,7 +52,7 @@ const SuccessedKarzars = () => {
               }}
             >
               <UserOutlined style={{ paddingLeft: "8px" }} />
-              <p>یشیشسیشیسشیسش</p>
+              <p className="karzar-creator">یشیشسیشیسشیسش</p>
             </div>
           </Card>
         </div>

@@ -2,8 +2,8 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  width: 100%;
-  /* width: 80%; */
+  /*width: 100%;*/
+  width: 95vw;
   height: fit-content;
   background-color: white;
   border-radius: 0 0 15px 15px;
@@ -30,6 +30,9 @@
   padding-top: 5px;
 }
 .navbar-side__item {
+  height: 50px;
+  display: flex;
+  align-items: center;
   margin: 0px 4px;
   padding: 0 10px;
   color: #25a69b !important;
@@ -44,34 +47,31 @@
 .navbar-side__item-menu {
   display: none;
   position: absolute;
-  top: 10%;
-  left: 25%;
+  top: 12%;
+  left: 3.4%;
   background-color: white;
   width: fit-content;
-  padding: 12px 0px;
+  padding: 4px 0px;
   border-radius: 12px;
   border: 1px solid #25a69b;
   list-style-type: none;
   z-index: 1;
 }
 .navbar-side__item:hover .navbar-side__item-menu {
-  display: block;
+  display: flex;
 }
 .navbar-side__item-menu-sub {
   padding: 8px;
 }
 .navbar-side__item-menu-sub:hover {
   background-color: rgba(195, 195, 195, 0.434);
-  color: black !important;
+  border-radius: 4px;
 }
 .navbar-side__title-sub:last-child {
   padding-bottom: 0;
 }
 a {
   color: #25a69b;
-}
-a:hover {
-  color: black;
 }
 .navbar-sidebar__button {
   padding: 12px;
@@ -101,16 +101,42 @@ a:hover {
   justify-content: space-between;
 }
 .login-modal__input-section__input {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 4px 11px;
+  color: rgba(0, 0, 0, 0.88);
+  font-size: 14px;
+  line-height: 1.5714285714285714;
+  list-style: none;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  position: relative;
+  display: inline-block;
   width: 80%;
-  height: 24px;
-  border: 1px solid #666;
-  border-radius: 4px;
-  padding: 0px 8px;
-  /* direction: ltr; */
+  min-width: 0;
+  background-color: #ffffff;
+  background-image: none;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #d9d9d9;
+  border-radius: 6px;
+  transition: all 0.2s;
 }
 .login-modal__input-section__input:focus {
   outline: none !important;
 }
 .login-modal__input-section__input::placeholder {
   color: rgba(192, 192, 192, 0.574);
+}
+.textarea-alarm {
+  color: #25a69b;
+  margin-right: 12px;
+}
+.textarea-alarm::before {
+  content: "*";
+  color: red;
+  position: relative;
+  top: 4px;
+  padding-left: 4px;
 }
