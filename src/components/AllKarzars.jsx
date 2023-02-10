@@ -1,26 +1,51 @@
 import React from "react";
 import "../assets/new-karzar.css";
 import { EditOutlined, UserOutlined } from "@ant-design/icons";
-import { Card, Pagination } from "antd";
+import { Card, Input, Select, DatePicker, Pagination } from "antd";
 import { useNavigate } from "react-router-dom";
 
+const { Search } = Input;
+const { Option } = Select;
 const { Meta } = Card;
 
-const PopularKarzars = () => {
+const NewKarzars = () => {
   const navigate = useNavigate();
 
   function handleClick() {
-    navigate("/popularKarzars");
+    navigate("/newKarzars");
   }
+  const onSearch = (value) => console.log(value);
+
+  const optionItems = [
+    { value: "", name: "همه" },
+    { value: "isOpen", name: "باز" },
+    { value: "isClose", name: "بسته" },
+    { value: "isSuccess", name: "موفق" },
+    { value: "isNotSuccess", name: "ناموفق" },
+  ];
 
   return (
     <React.Fragment>
       <div className="new">
         <div className="new-header">
-          <h2 className="new-header__title">پر طرفدارترین کارزارها</h2>
-          <button className="karzar--btn" onClick={handleClick}>
-            کارزارهای بیشتر
-          </button>
+          <h2 className="new-header__title">فهرست همه کارزار</h2>
+          <div className="search-cnt">
+            <DatePicker
+              className="search-cnt__date"
+              placeholder="تاریخ را انتخاب کنید"
+            />
+            <Select className="search-cnt__select" defaultValue="همه">
+              {optionItems.map((item) => {
+                return <Option value={item.value}>{item.name}</Option>;
+              })}
+            </Select>
+            <Search
+              className="search-cnt__search"
+              placeholder="جستجو"
+              allowClear
+              onSearch={onSearch}
+            />
+          </div>
         </div>
         <br />
         <div className="new-card__cnt">
@@ -56,10 +81,10 @@ const PopularKarzars = () => {
             </div>
           </Card>
         </div>
-        {window.location.href.includes("popularKarzars") && <Pagination defaultCurrent={1} total={50} />}
+        <Pagination defaultCurrent={1} total={50} />
       </div>
     </React.Fragment>
   );
 };
 
-export default PopularKarzars;
+export default NewKarzars;

@@ -12,7 +12,6 @@
 }
 .navbar-side {
   width: fit-content;
-  min-width: 200px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -139,4 +138,15 @@ a {
   position: relative;
   top: 4px;
   padding-left: 4px;
+}
+@media only screen and (max-width: 426px) {
+  .navbar-side__item-menu {
+    left: 0%;
+    top: 18%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .navbar-side {
+    flex-direction: column;
+  }
 }

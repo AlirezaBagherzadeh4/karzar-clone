@@ -1,7 +1,7 @@
 import {React, useState} from "react";
 import "../assets/new-karzar.css";
 import {EditOutlined} from "@ant-design/icons";
-import {Card, Modal} from "antd";
+import {Card, Modal, Pagination} from "antd";
 import {useNavigate, useLocation} from "react-router-dom";
 
 const {Meta} = Card;
@@ -31,7 +31,7 @@ const OpenKarzars = () => {
     return (
         <div className="new">
             <div className="new-header">
-                <h1 className="new-header__title">کارزارهای باز</h1>
+                <h2 className="new-header__title">کارزارهای باز</h2>
                 {!location.pathname.includes("openKarzars") &&
                     <button className="karzar--btn" onClick={handleClick}>کارزارهای بیشتر</button>}
             </div>
@@ -122,6 +122,7 @@ const OpenKarzars = () => {
                     </div>
                 </Card>
             </div>
+            {window.location.href.includes("openKarzars") && <Pagination defaultCurrent={1} total={50} />}
         </div>
     );
 };

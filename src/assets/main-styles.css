@@ -60,3 +60,34 @@ body {
   overflow: hidden;
   text-overflow: ellipsis;
 }
+.search-cnt {
+  display: flex;
+  justify-content: flex-end;
+  width: 65%;
+}
+.search-cnt__date {
+  width: 30%;
+}
+.search-cnt__select {
+  width: 25%;
+}
+.search-cnt__search {
+  width: 75%;
+}
+
+@media only screen and (max-width: 426px) {
+  .search-cnt {
+    flex-direction: column;
+  }
+  .search-cnt__date {
+    width: 100%;
+    margin-bottom: 8px;
+  }
+  .search-cnt__select {
+    width: 100%;
+    margin-bottom: 8px;
+  }
+  .search-cnt__search {
+    width: 100%;
+  }
+}

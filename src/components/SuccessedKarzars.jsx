@@ -1,7 +1,7 @@
 import React from "react";
 import "../assets/new-karzar.css";
 import { EditOutlined, UserOutlined } from "@ant-design/icons";
-import { Card } from "antd";
+import { Card, Pagination } from "antd";
 import { useNavigate } from "react-router-dom";
 
 const { Meta } = Card;
@@ -17,7 +17,7 @@ const SuccessedKarzars = () => {
     <React.Fragment>
       <div className="new">
         <div className="new-header">
-          <h1 className="new-header__title">کارزارهای موفق</h1>
+          <h2 className="new-header__title">کارزارهای موفق</h2>
           <button className="karzar--btn" onClick={handleClick}>
             کارزارهای بیشتر
           </button>
@@ -56,6 +56,9 @@ const SuccessedKarzars = () => {
             </div>
           </Card>
         </div>
+        {window.location.href.includes("successedKarzars") && (
+          <Pagination defaultCurrent={1} total={50} />
+        )}
       </div>
     </React.Fragment>
   );

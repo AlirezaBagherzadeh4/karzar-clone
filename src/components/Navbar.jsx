@@ -184,6 +184,7 @@ const Navbar = () => {
       id: 1,
       name: "کارزارها",
       items: [
+        { name: "همه کارزارها", link: "/allKarzars" },
         { name: "جدیدترین کارزارها", link: "/newKarzars" },
         { name: "پُر طرفدارترین کارزارها", link: "/popularKarzars" },
         { name: "کارزارهای موفق", link: "/successedKarzars" },
@@ -365,8 +366,8 @@ const Navbar = () => {
                   <button
                     className="karzar--btn"
                     disabled={
-                      karzarContent === "" &&
-                      karzarContentLength < 15 &&
+                      karzarContent === "" ||
+                      karzarContentLength < 15 ||
                       karzarContentLength > 60
                     }
                   >

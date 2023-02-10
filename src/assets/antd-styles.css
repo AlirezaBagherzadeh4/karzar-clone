@@ -1,6 +1,15 @@
 .ant-layout {
   background-color: white !important;
 }
+.ant-layout-sider {
+  position: relative;
+  min-width: 0;
+  background: #001529;
+  transition: all 0.2s;
+  height: fit-content;
+  right: 1.5rem;
+  top: 1px;
+}
 .ant-layout-sider,
 .ant-menu {
   flex: 0 0 110px !important;
@@ -34,4 +43,42 @@
 }
 .ant-steps-item-tail::after {
   background-color: #25a69b !important;
+}
+.ant-result-extra {
+  margin: 12px 0px 0px 0px;
+}
+.ant-popconfirm {
+  direction: rtl !important;
+}
+.anticon-exclamation-circle {
+  color: red !important;
+}
+
+.ant-tag,
+.ant-tag__ok {
+  text-align: center !important;
+  min-width: 65px !important;
+  background-color: #0080001d !important;
+  color: green !important;
+}
+.ant-tag__nok {
+  color: red !important;
+  background-color: #ff00001a !important;
+}
+.ant-pagination,
+.ant-table-pagination {
+  direction: ltr !important;
+}
+.ant-pagination-item-active {
+  color: #25a69b !important;
+  border-color: #25a69b !important;
+}
+.ant-pagination-item-active > a {
+  color: #25a69b !important;
+}
+
+@media only screen and (max-width: 426px) {
+  .ant-card {
+    width: 100% !important;
+  }
 }
