@@ -26,7 +26,7 @@ const NewKarzars = () => {
         <div className="new-card__cnt">
           <Card
             className="new-card__cnt--card"
-            style={{ width: "32%", marginBottom: "12px", cursor: "pointer" }}
+            style={{ width: "32%", marginBottom: "12px" }}
             cover={
               <img
                 alt="example"
@@ -56,7 +56,9 @@ const NewKarzars = () => {
             </div>
           </Card>
         </div>
-        {window.location.href.includes("newKarzars") && <Pagination defaultCurrent={1} total={50} />}
+        {window.location.href.includes("newKarzars") && (
+          <Pagination defaultCurrent={1} total={50} />
+        )}
       </div>
     </React.Fragment>
   );

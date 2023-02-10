@@ -51,7 +51,7 @@ const NewKarzars = () => {
         <div className="new-card__cnt">
           <Card
             className="new-card__cnt--card"
-            style={{ width: "32%", marginBottom: "12px", cursor: "pointer" }}
+            style={{ width: "32%", marginBottom: "12px" }}
             cover={
               <img
                 alt="example"
