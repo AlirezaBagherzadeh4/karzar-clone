@@ -12,6 +12,22 @@ body {
   align-items: center;
   box-sizing: border-box;
 }
+body::-webkit-scrollbar {
+  width: 8px;
+}
+/* Track */
+body::-webkit-scrollbar-track {
+  background: white;
+}
+/* Handle */
+body::-webkit-scrollbar-thumb {
+  background: #25a69b92;
+  border-radius: 8px;
+}
+/* Handle on hover */
+body::-webkit-scrollbar-thumb:hover {
+  background: #25a69b;
+}
 #root {
   width: 98vw;
   height: 100%;

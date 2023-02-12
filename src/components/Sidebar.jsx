@@ -29,8 +29,6 @@ const Sidebar = () => {
 
   const [content, setContent] = useState(1);
 
-  const [passwordVisible, setPasswordVisible] = React.useState(false);
-
   const navigate = useNavigate();
 
   const handleSelectChange = (value) => {
@@ -126,7 +124,7 @@ const Sidebar = () => {
               className={status == "تأیید شده" ? "ant-tag__ok" : "ant-tag__nok"}
               key={status}
             >
-              {status.toUpperCase()}
+              {status}
             </Tag>
           }
         </>
@@ -175,7 +173,7 @@ const Sidebar = () => {
               }
               key={status}
             >
-              {status.toUpperCase()}
+              {status}
             </Tag>
           }
         </>
@@ -409,7 +407,7 @@ const Sidebar = () => {
             </Card>
           ) : content == 3 ? (
             <Card
-              title="لیست کاربران"
+              title="لیست کارزارها"
               style={{ flex: "1 0 33%", margin: "0 10px", height: "100%" }}
             >
               <div

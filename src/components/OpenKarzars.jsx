@@ -1,9 +1,10 @@
 import { React, useState } from "react";
 import "../assets/new-karzar.css";
 import { EditOutlined } from "@ant-design/icons";
-import { Card, Modal, Pagination } from "antd";
+import { Card, Modal, Pagination, DatePicker, Input } from "antd";
 import { useNavigate, useLocation } from "react-router-dom";
 
+const { Search } = Input;
 const { Meta } = Card;
 
 const OpenKarzars = () => {
@@ -13,6 +14,7 @@ const OpenKarzars = () => {
   function handleClick() {
     navigate("/openKarzars");
   }
+  const onSearch = (value) => console.log(value);
 
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -32,6 +34,20 @@ const OpenKarzars = () => {
     <div className="new">
       <div className="new-header">
         <h2 className="new-header__title">کارزارهای باز</h2>
+        {window.location.href.includes("/openKarzars") && (
+          <div className="search-cnt">
+            <DatePicker
+              className="search-cnt__date"
+              placeholder="تاریخ را انتخاب کنید"
+            />
+            <Search
+              className="search-cnt__search"
+              placeholder="جستجو"
+              allowClear
+              onSearch={onSearch}
+            />
+          </div>
+        )}
         {!location.pathname.includes("openKarzars") && (
           <button className="karzar--btn" onClick={handleClick}>
             کارزارهای بیشتر

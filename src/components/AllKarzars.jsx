@@ -20,8 +20,6 @@ const NewKarzars = () => {
     { value: "", name: "همه" },
     { value: "isOpen", name: "باز" },
     { value: "isClose", name: "بسته" },
-    { value: "isSuccess", name: "موفق" },
-    { value: "isNotSuccess", name: "ناموفق" },
   ];
 
   return (

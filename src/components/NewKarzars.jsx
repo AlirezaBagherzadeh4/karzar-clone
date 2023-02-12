@@ -18,9 +18,11 @@ const NewKarzars = () => {
       <div className="new">
         <div className="new-header">
           <h2 className="new-header__title">جدید‌ترین کارزارها</h2>
-          <button className="karzar--btn" onClick={handleClick}>
-            کارزارهای بیشتر
-          </button>
+          {!window.location.href.includes("/newKarzars") && (
+            <button className="karzar--btn" onClick={handleClick}>
+              کارزارهای بیشتر
+            </button>
+          )}
         </div>
         <br />
         <div className="new-card__cnt">
